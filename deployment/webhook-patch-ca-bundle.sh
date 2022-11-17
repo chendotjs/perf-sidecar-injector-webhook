@@ -13,3 +13,5 @@ if command -v envsubst >/dev/null 2>&1; then
 else
     sed -e "s|\${CA_BUNDLE}|${CA_BUNDLE}|g"
 fi
+
+# then we can use `curl --cacert <ca-bundle.pem> https://<svcname>.<svcns>.svc` without `-k`
